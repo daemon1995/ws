@@ -1,0 +1,23 @@
+ZVSE
+
+** FIRST MONEY
+** œ≈–¬€≈ ƒ≈Õ‹√»
+
+** Option 040 by Alexis Koz (script40)
+
+* Every player (and computer too) is given:
+* 17000 gold, 35 wood, 35 ore, 13 mercury, 13 sulfur, 13 crystals, 13 gems and 7 mifril once at the beginning of the game.
+
+ [Weekly Timer, only activates once (for first colour)]
+!?TM1&$once$=1/$weekday$=$monday$/$day$=1;
+!!UN:P40/?y1;
+!!FU&y1<>1:E;
+!!re y2/0/7:;
+  !!OW:Ry2/0/d35 Ry2/1/d13 Ry2/2/d35;
+  !!OW:Ry2/3/d13 Ry2/4/d13 Ry2/5/d13;
+  !!OW:Ry2/6/d17000;
+  !!OW:Ry2/7/d7;
+!!en:;
+!!UN:R2;
+
+** End of Script **
