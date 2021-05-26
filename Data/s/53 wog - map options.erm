@@ -595,8 +595,12 @@ Dialogue Box numbers used: 17
 !?CM1;
 
 !!UN:P169/?v1; [Check if town renaming option is enabled]
-!!CM:A?v2/?v3; [Get x/y position of click (v2/v3)]
-!!FU10813&v1=1/v2>=79/v2<=240/v3>=387/v3<=405:P;  [Call renaming function if town name is clicked]
+!!CM:I?v2 S?v3;A?v2/?v3; [Get x/y position of click (v2/v3)]
+!!if&v1=1/v2=149/v3=13:;
+  !!VRz-1:S^Button.vaw^;
+  !!SN:Pz-1;
+  !!FU10813:P;>=79/v2<=240/v3>=387/v3<=405:P;  [Call renaming function if town name is clicked]
+!!en;
 
 -------------------------------------------------------------------------------
 
@@ -605,8 +609,10 @@ Dialogue Box numbers used: 17
 !!UN:P169/?v1; [Check if town renaming option is enabled]
 !!FU&v1<>1:E; [Exit if Town Renaming isn't enabled]
 !!VRz-1:Sz125000;
-!!CM:A?v2/?v3; [Get x/y position of mouse pointer (v2/v3)]
-!!CM&v2>=79/v2<=240/v3>=387/v3<=406:Mz-1; [Display hint text]
+!!CM:I?v1;
+*!CM:I149?v2/?v3; [Get x/y position of mouse pointer (v2/v3)]
+*!CM&v2>=79/v2<=240/v3>=387/v3<=406:Mz-1; [Display hint text]
+!!CM&v1=149:Mz-1; [Display hint text]
 
 -------------------------------------------------------------------------------
 
@@ -1483,12 +1489,12 @@ Dialogues used: DG25
 
  [Signs]
  [v1270 is from Passable Terrain script that places temporary signs for battles]
-!$OB91&v1270=0;
+!$OB91&1000/v1270=0;
 !!UN:P183/?y-1; [Check if script is enabled: y-1]
 !!FU&y-1<>1:E; [Exit if script isn't enabled]
 !!SG998:M?z1; [Current Sign Text: z1]
 
-!!IF&1000:Q4/z125031;
+!!IF:Q4/z125031;
 
  [Enter text dialogue box for sign]
 !!VRz2:S^^;
@@ -1499,7 +1505,7 @@ Dialogues used: DG25
 !!VRz1:H5; [Check if text entered: flag 5=1 if yes]
 
  [Set new text for sign if new text was entered]
-!!SG998&4/5:M^%Z1^;
+!!SG998&4/5:Mz1;
 
  [Set PO:S number to show who's visited the sign]
 !!OW:C?v1; [Current player: v1]

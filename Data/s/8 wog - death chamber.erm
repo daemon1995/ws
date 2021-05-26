@@ -58,6 +58,8 @@ ZVSE
 !#HT63/15&v806=1:P1/891;
 
 **------------------------------------------------------------------------------
+!?HM-1;
+!!IF&v806=1:V800/0;       **Sets FLAG 800 to false while walking to preven DC fight after reloading
 
 !?OB63/15&1000/v806=1;  *Triggers when any "Death Chamber" is visited
 
@@ -400,4 +402,3 @@ ZVSE
 !!VRv820:S0;
 
 **End post-battle trigger
-

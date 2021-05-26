@@ -1,27 +1,16 @@
 #	Text resource for "script49.erm" document		
 149000	HENCHMAN BONUS STATS AT LEVEL 1 :
 
-+1 Attack
-+1 Defense
-+1 Speed
-+2-5 Base Damage
-+10 Base Health
++1-2 Base Damage
++50 Base Health
 
-At every 3rd level : +1 Attack, +1 Defense
-At every 10th level : +1 Speed 
-
-Henchmen gain {Status} for each battle fought and gain levels (indicated by increased stack quantity). They also benefit from a {Status Bonus} based on hero level and current day.
-
-Henchmen will die after one of the stack is lost, they may offer one last retaliation before doing so.
+Henchmen gain {Battle Experience} for each battle fought and gain levels. They also benefit from a {Bonus Experience} based on hero level and current day.
 
 Lower level/un-upgraded creatures level up faster than higher level/upgraded creatures.
 
 The "Disguise" spell is applied to color their quantity tag to help separate them from normal creatures.
 
-Dead henchmen can be resurrected in a town for a fee based on creature cost and level.
-
-AI heroes have a (good) chance of having a henchman of random level ({Status} based on hero level). The creature type is chosen randomly each battle and may even be of a type not in the hero's army.
-	<!!Q>	01.08.2004
+Dead henchmen can be resurrected in a town for a fee based on creature cost and level.	<!!Q>	01.08.2004
 149001	You have not yet chosen a Henchman.
 Do you wish to look over your troops and see if any are worthy of the honor?
 
@@ -36,8 +25,8 @@ Do you wish to look over your troops and see if any are worthy of the honor?
 149004	NO THANKS	<!!S>	01.08.2004
 149005	<<<<<<{DEAD}>>>>>>	<!!S>	01.08.2004
 149006	{Henchman level} : %Y3
-{Level Rate} : %V7215  {Status for next level} : %Y4
-{Status Total} : %Y11  {Earned} : %W117  {Bonus} : %Y2
+{Level Rate} : %V7215  {Next Level} : %Y4
+{Total Exp} : %Y11  {Battle} : %W117  {Bonus} : %Y2
 Attack : %Y5
 Defense : %Y6
 Health : %Y7

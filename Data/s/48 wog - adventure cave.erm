@@ -529,15 +529,24 @@ ZVSE
 ** end of Battlefield obstacle trigger
 
 
+** Troop position/special effect set-up trigger
+
+!?FU(OnAfterTacticsPhase);              [Archer - fix incompatibility with the latest ERA]
+!!FU737&v547<>0:P;                      [set-up special troop positions]
+!!DO790/0/41/1&v547=4:P70/0/0/4;        [turn army to stone]
+
+** end of Troop position/special effect trigger
+
+
 ** Battlefield round trigger
 
 !?BR;
 !!UN:P30/?y-1;     [Check for WoG option]
 !!FU&y-1=0:E;     [Exit if its disabled]
 
-!!FU737&v547<>0/v997=-1:P; [set-up special troop positions]
+*!FU737&v547<>0/v997=0:P; [set-up special troop positions - moved to OnAfterTacticsPhase]
 !!FU785&v547>=3/v547<=10:P; [handle special battlefield stuff]
-!!FU820&v997=-1:P; [handle pool effects]
+!!FU820&v997=0:P; [handle pool effects]
 !!FU826:P; [handle altar effects]
 
 ** end of Battlefield round trigger
@@ -1735,7 +1744,7 @@ ZVSE
 !!FU788&v547=3/v522=1/v997>=1:P1/137/520; [get sharpshooter stack # in v520] [should be v997>=0]
 !!FU786&v547=3/v522=1/v997>=1/v520<>-1:Pv520/63/13 Pv520/148/13; [fire walls] [ditto]
 
-!!DO790/0/41/1&v547=4/v997=-1:P70/0/0/4; [turn army to stone]
+*!DO790/0/41/1&v547=4/v997=1:P70/0/0/4; [turn army to stone - moved to OnAfterTacticsPhase]
 !!IF&v547=4/v522=1/v997=1:M1/z130286;
 !!BU&v547=4/v522=1/v997=1:S7/30/1/0/-1/1; [crusaders arrive]
 !!IF&v547=4/v522=1/v997=1:V603/1; [remember that crusaders appeared]
@@ -1744,7 +1753,7 @@ ZVSE
 !!VRy1:Sv520; [remember archmage stack]
 !!FU788&v547=7/v520=-1:P1/116/520; [get a gold golem stack # in v520]
 !!VRv520&y1<>-1:Sy1; [use archmages for remove obstacles if found, otherwise use golems]
-!!BMy1&v547=7/v997=-1/y1<>-1:M34/3/3; [3 rounds of Anti-Magic on archmages]
+!!BMy1&v547=7/v997=0/y1<>-1:M34/3/3; [3 rounds of Anti-Magic on archmages]
 !!BMv520&v547=7/v997=1/v520<>-1:C64/25/3/3/0 C64/93/3/3/0 C64/161/3/3/0; [remove obstacles]
 !!DO791/0/41/1&v547=7/v997>0/y1<>-1:Py1/15; [magic arrow barrage]
 
@@ -2267,7 +2276,7 @@ ZVSE
 !!IF:Wx1; [use attacker's w variables]
 !!VRy1:Sw74 &4; [check altar-visited bits]
 !!VRy2:Sw74 &8;
-!!DO829/0/41/1&y1<>0/v997=-1:Px2; [double 1st-level hit points]
+!!DO829/0/41/1&y1<>0/v997=0:Px2; [double 1st-level hit points]
 !!DO830/0/41/1&y2<>0/v997>=1/v997<=20:Px2; [+2 att/def/speed each round]
 
 ** end of function

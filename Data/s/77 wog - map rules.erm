@@ -599,9 +599,7 @@ WoGify ERM code: 101 (0-5) plus 111-130 (0-1) for individual rules
 
 !?FU708;
 !!HEx1:C0/x16/?y1/?y2; [get y1 type y2 qty]
-
-!!FU|y1<0/y1>131/y2<0:E;  [exit, if count >= 4000]
-
+!!FU&y1<0|y2<0/y2>3999:E;  [exit, if count >= 4000]
 !!MA:Ly1/?y3;       [get mon lvl]
 !!FU&y3<>6:E;       [exit, if not 7th level]
 !!VRy1&y1=13:S150;  [archangel]
@@ -614,7 +612,6 @@ WoGify ERM code: 101 (0-5) plus 111-130 (0-1) for individual rules
 !!VRy1&y1=111:S157; [chaos hydra]
 !!VRy1&y1=131:S158; [phoenix]
 !!HEx1&y1>=150/y1<=158:C0/x16/y1/y2; [set creature type/qty]
-!!IF&x1=150:M^^;
 
 ** end of function
 

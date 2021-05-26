@@ -307,7 +307,7 @@ ZVSE
 !!BG&v872=147/v874>0/p=1/o=s:A11 Do; //perform healing on the tent itself
 
 --------------------------- B E F O R E     B A T T L E ---------------------
-!?FU870520&v847=1;
+!?FU(OnBattleReplay)&v847=1;
 !!IF:V789/0; //we set number of war machines
 
 !?BA0&v847=1; //before battle begins

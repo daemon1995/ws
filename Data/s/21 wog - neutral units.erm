@@ -250,7 +250,7 @@ Recommendations for Neutral Units Bonuses:
 !!DO1003/21/41/1&v2=1/1000:P; [Give Immunity to Fire Spells to some neutral units]
 
 
-!?FU870520;
+!?FU(OnBattleReplay);
 !!UN:P57/?v2;     [Check if Neutral Units script is enabled in WoGify Options: v2]
 !!VRv100&v2=1:S1; [Renable v100 to 1]
 
