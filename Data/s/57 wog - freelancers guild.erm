@@ -423,7 +423,7 @@ Timers: 64
 
  [Store player colour text of colour chosen in z1]
 !!VRy2:Sy1 +220;
-!!VRz1&y1<>8:Sy2;
+!!VRz1&y1<>8:Szy2;
 
  [Store word for single vs. plural]
 !!VRz2&v223>1:Sz121055;
@@ -622,7 +622,7 @@ Timers: 64
 !!VRz5&y4=1:Sz121080;
 
  [If attacking player is the same one that hired the WM, it gives a message and leaves]
-!!MO998&y1=y2:M^%Z121081^;
+!!MO998&y1=y2:Mz121081;
 
  [Change number of monsters to 0 and delete their wandering monster message]
  [if attacking player colour is also the hiring player colour]
@@ -641,4 +641,3 @@ Timers: 64
  [Post-Visit trigger for when a hero attacks a monster hired by the same player]
 !$OB54&v3405=99;
 !!VRv3405:S0; [Reset v3405 to 0]
-

@@ -3,7 +3,7 @@ ZVSE
 ** Summon elemental by Bonizag
 ** Wogify Name: script74.erm
 ** Updated: August 21, 2004
-1
+
 ** string variables used: z1-z5 temporarily
 
 ** variables used:        v848, v860-v861, v881-v882, v7600-v7756
@@ -434,3 +434,4 @@ ZVSE
 
 !!IF:Wx16;
 !!VRw84:S0;
+
